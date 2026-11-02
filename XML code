@@ -1,6 +1,5 @@
 # Project-Codes
 PROJECT 1 : 5 DOF ROBOTIC ARM VISULAIZED IN Rviz 
-(.XML CODE)
 
 <?xml version="1.0"?>
 <robot name="arm_5dof">
