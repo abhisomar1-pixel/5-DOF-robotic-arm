@@ -1,0 +1,16 @@
+Project 1: 5 DOF robot arm visualized in Rviz 
+display.launch codes
+
+<launch>
+    <!-- Load URDF into parameter server -->
+    <param name="robot_description" textfile="$(find your_package_name)/urdf/arm_5dof.urdf" />
+
+    <!-- Joint State Publisher GUI with interactive sliders -->
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+    <!-- Robot State Publisher for TF and Forward Kinematics -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <!-- RViz Visualization with custom configuration or default view -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find your_package_name)/urdf.rviz" required="true" />
+</launch>
